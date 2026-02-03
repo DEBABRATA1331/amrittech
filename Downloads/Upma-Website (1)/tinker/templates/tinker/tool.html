@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% block title %}Curve Tool | Upmark Curve{% endblock %}
+
+{% block content %}
+<div class="tool-header">
+    <h1>Curve Tool</h1>
+    <p>Essential Hardware for your Innovation Journey. Arduino, ESP32, and More.</p>
+</div>
+
+<div class="product-grid">
+    {% for product in products %}
+    <div class="product-card glass-panel">
+        <div class="product-img">
+            {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% else %}
+            <div class="icon">📦</div>
+            {% endif %}
+        </div>
+        <div class="product-details">
+            <h3>{{ product.name }}</h3>
+            <p class="description">{{ product.description|truncatewords:15 }}</p>
+            <div class="price-row">
+                <span class="price">₹{{ product.price }}</span>
+                {% if product.stock > 0 %}
+                <button class="btn sm" onclick="buyProduct('{{ product.id }}')">Buy Now</button>
+                {% else %}
+                <button class="btn sm disabled" disabled>Out of Stock</button>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p class="no-data">Store is currently restocking. Check back later!</p>
+    {% endfor %}
+</div>
+
+<!-- Razorpay Script -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    async function buyProduct(productId) {
+        try {
+            // 1. Create Order
+            const response = await fetch("{% url 'create_order' %}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "X-CSRFToken": "{{ csrf_token }}"
+                },
+                body: "product_id=" + productId
+            });
+
+            const orderData = await response.json();
+
+            // 2. Open Razorpay Checkout
+            var options = {
+                "key": orderData.key_id,
+                "amount": orderData.amount,
+                "currency": "INR",
+                "name": "Curve Tool",
+                "description": "Purchase " + orderData.product_name,
+                "order_id": orderData.order_id,
+                "callback_url": "{% url 'payment_callback' %}",
+                "theme": {
+                    "color": "#3b82f6"
+                }
+            };
+
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+
+        } catch (error) {
+            console.error(error);
+            alert("Something went wrong with the payment setup.");
+        }
+    }
+</script>
+
+<style>
+    .tool-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .product-card {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-img {
+        height: 200px;
+        background: #1e293b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 1rem;
+    }
+
+    .product-details {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price-row {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .price {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--accent-color);
+    }
+
+    .btn.sm {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .btn.disabled {
+        background: #475569;
+        box-shadow: none;
+        cursor: not-allowed;
+    }
+</style>
+{% endblock %}

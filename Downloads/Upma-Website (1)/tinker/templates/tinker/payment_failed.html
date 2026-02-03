@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="payment-status failed glass-panel">
+    <h1>Payment Failed ❌</h1>
+    <p>Something went wrong with the transaction.</p>
+    <p class="error-msg">{{ error }}</p>
+    <a href="{% url 'tinker_tool' %}" class="btn mt-4">Try Again</a>
+</div>
+
+<style>
+    .payment-status {
+        max_width: 600px;
+        margin: 4rem auto;
+        padding: 3rem;
+        text-align: center;
+    }
+
+    .payment-status h1 {
+        color: #f87171;
+    }
+
+    .error-msg {
+        color: #fca5a5;
+        margin: 1rem 0;
+        font-family: monospace;
+    }
+</style>
+{% endblock %}

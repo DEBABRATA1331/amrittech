@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1>Welcome to <span class="highlight">Upmark Curve</span></h1>
+        <p>Empowering Students, Innovators, and Businesses.</p>
+    </div>
+</div>
+
+<div class="curve-sections">
+    <!-- Curve Guidance -->
+    <a href="/guidance/" class="card glass-panel">
+        <div class="card-content">
+            <h2>Curve Guidance</h2>
+            <p>Connect with State Toppers, IITians, and NEET Rankers for personalized counseling.</p>
+            <span class="btn-text">Explore Guidance &rarr;</span>
+        </div>
+    </a>
+
+    <!-- Curve Tinker -->
+    <a href="/tinker/" class="card glass-panel">
+        <div class="card-content">
+            <h2>Curve Tinker</h2>
+            <p>Robotics, Arduino, K-12 Project Labs, Campus Community, Blog Vault, and Magazine.</p>
+            <span class="btn-text">Visit Tinker Lab &rarr;</span>
+        </div>
+    </a>
+
+    <!-- Curve Studio -->
+    <a href="/studio/" class="card glass-panel">
+        <div class="card-content">
+            <h2>Curve Studio</h2>
+            <p>Professional services for small businesses: Branding, Video, Audio, and Web Design.</p>
+            <span class="btn-text">Enter Studio &rarr;</span>
+        </div>
+    </a>
+</div>
+
+<style>
+    /* Local styles specific to Index Page */
+    .hero {
+        text-align: center;
+        padding: 4rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+    }
+
+    .highlight {
+        background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+    }
+
+    .curve-sections {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .card {
+        display: block;
+        padding: 2rem;
+        text-align: left;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-color);
+    }
+
+    .card h2 {
+        font-size: 1.75rem;
+        color: var(--accent-color);
+        margin-bottom: 1rem;
+    }
+
+    .card p {
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-text {
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+</style>
+{% endblock %}

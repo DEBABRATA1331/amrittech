@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}Curve Campus | Upmark Curve{% endblock %}
+
+{% block content %}
+<div class="campus-container">
+    <h1>Curve Campus Community</h1>
+    <p>Connect with peers, mentors, and innovators.</p>
+
+    <div class="social-links">
+        <a href="#" class="social-card telegram glass-panel">
+            <div class="social-icon">✈️</div>
+            <h2>Join Telegram</h2>
+            <p>Get instant updates and study materials.</p>
+        </a>
+        <a href="#" class="social-card whatsapp glass-panel">
+            <div class="social-icon">💬</div>
+            <h2>Join WhatsApp</h2>
+            <p>Discuss projects and clear doubts in real-time.</p>
+        </a>
+    </div>
+</div>
+
+<style>
+    .campus-container {
+        text-align: center;
+        max-width: 800px;
+        margin: 4rem auto;
+    }
+
+    .campus-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .social-card {
+        padding: 3rem;
+        min-width: 280px;
+        transition: transform 0.3s ease;
+    }
+
+    .social-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .social-icon {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .telegram:hover {
+        border-color: #229ED9;
+        background: rgba(34, 158, 217, 0.1);
+    }
+
+    .whatsapp:hover {
+        border-color: #25D366;
+        background: rgba(37, 211, 102, 0.1);
+    }
+</style>
+{% endblock %}

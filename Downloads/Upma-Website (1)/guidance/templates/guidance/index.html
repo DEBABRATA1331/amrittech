@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block title %}Curve Guidance | Upmark Curve{% endblock %}
+
+{% block content %}
+<div class="guidance-header">
+    <h1>Curve Guidance</h1>
+    <p>Get mentored by the best. State Toppers, IITians, and Rankers are here to guide you.</p>
+</div>
+
+<!-- Exam Categories Filter (Visual only for now, can be made functional with JS) -->
+<div class="filters">
+    <button class="filter-btn active">All</button>
+    {% for exam in exams %}
+    <button class="filter-btn">{{ exam.name }}</button>
+    {% endfor %}
+</div>
+
+<div class="counselor-grid">
+    {% for counselor in counselors %}
+    <div class="counselor-card glass-panel">
+        <div class="counselor-img">
+            {% if counselor.photo %}
+            <img src="{{ counselor.photo.url }}" alt="{{ counselor.name }}">
+            {% else %}
+            <div class="placeholder-img">{{ counselor.name|slice:":1" }}</div>
+            {% endif %}
+        </div>
+        <div class="counselor-info">
+            <h3>{{ counselor.name }}</h3>
+            <span class="badge">{{ counselor.exam.name }}</span>
+            <p class="achievement">{{ counselor.achievement }}</p>
+            <p class="bio">{{ counselor.bio|truncatewords:20 }}</p>
+
+            {% if counselor.whatsapp_link %}
+            <a href="{{ counselor.whatsapp_link }}" target="_blank" class="btn">Book Session</a>
+            {% else %}
+            <button class="btn" disabled>Unavailable</button>
+            {% endif %}
+        </div>
+    </div>
+    {% empty %}
+    <p class="no-data">No counselors available at the moment. Please check back later.</p>
+    {% endfor %}
+</div>
+
+<style>
+    .guidance-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .guidance-header h1 {
+        font-size: 2.5rem;
+        color: var(--accent-color);
+    }
+
+    .filters {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--glass-border);
+        color: var(--text-secondary);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+        background: var(--accent-color);
+        color: white;
+        border-color: var(--accent-color);
+    }
+
+    .counselor-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .counselor-card {
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .counselor-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .counselor-img {
+        height: 200px;
+        background: #1e293b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .counselor-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .placeholder-img {
+        font-size: 4rem;
+        color: var(--text-secondary);
+        font-weight: bold;
+    }
+
+    .counselor-info {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .counselor-info h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .badge {
+        display: inline-block;
+        background: rgba(59, 130, 246, 0.2);
+        color: #60a5fa;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        width: fit-content;
+        margin-bottom: 0.5rem;
+    }
+
+    .achievement {
+        font-weight: 500;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+    }
+
+    .bio {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin-bottom: 1.5rem;
+        flex: 1;
+    }
+
+    .no-data {
+        text-align: center;
+        grid-column: 1 / -1;
+        color: var(--text-secondary);
+        padding: 2rem;
+    }
+</style>
+{% endblock %}

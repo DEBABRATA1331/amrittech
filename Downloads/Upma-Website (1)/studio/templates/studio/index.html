@@ -1,0 +1,266 @@
+{% extends 'base.html' %}
+
+{% block title %}Curve Studio | Upmark Curve{% endblock %}
+
+{% block content %}
+<div class="studio-header">
+    <h1>Curve Studio</h1>
+    <p>We build brands. Professional services for your business.</p>
+</div>
+
+<!-- Services Grid -->
+<div class="services-grid">
+    {% for service in services %}
+    <div class="service-card glass-panel" onclick="openInquiry('{{ service.id }}', '{{ service.title }}')">
+        <div class="service-icon">{{ service.icon }}</div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+        <span class="price-tag">Starts at ₹{{ service.price_starts_at }}</span>
+        <button class="btn sm mt-4">Inquire Now</button>
+    </div>
+    {% empty %}
+    <p class="no-data">Services are being updated.</p>
+    {% endfor %}
+</div>
+
+<!-- Simple Inquiry Modal/Form Section (Inline for simplicity) -->
+<!-- Inquiry Modal/Form Section -->
+<div class="inquiry-section glass-panel" id="inquiryForm">
+    <div class="form-header">
+        <h2>Start a Project</h2>
+        <p id="selectedServiceText">Select a service above to get started.</p>
+    </div>
+
+    {% if success %}
+    <div class="alert success animate-fade-in">
+        <div class="success-icon">✓</div>
+        <h3>Request Received!</h3>
+        <p>We'll analyze your requirements and get back to you within 24 hours.</p>
+        <button onclick="window.location.reload()" class="btn sm mt-4">New Inquiry</button>
+    </div>
+    {% else %}
+    <form method="post" class="modern-form">
+        {% csrf_token %}
+        <input type="hidden" name="service_id" id="serviceIdInput" required>
+
+        <div class="form-row">
+            <div class="input-group">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" id="name" placeholder="John Doe" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="john@example.com" required>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="project_details">Project Details</label>
+            <textarea name="project_details" id="project_details" rows="5"
+                placeholder="Tell us about your goals, timeline, and budget..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn full-width" id="submitBtn" disabled>
+            <span>Send Inquiry</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+            </svg>
+        </button>
+    </form>
+    {% endif %}
+</div>
+
+<script>
+    function openInquiry(id, title) {
+        document.getElementById('serviceIdInput').value = id;
+        const text = document.getElementById('selectedServiceText');
+        text.innerHTML = `Inquiring about: <span class="highlight">${title}</span>`;
+        text.classList.add('active');
+
+        const btn = document.getElementById('submitBtn');
+        btn.disabled = false;
+        btn.classList.add('active');
+
+        document.getElementById('inquiryForm').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+</script>
+
+<style>
+    .studio-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .studio-header h1 {
+        font-size: 3rem;
+        background: linear-gradient(to right, #fff, #94a3b8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .service-card {
+        padding: 2.5rem;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .service-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--accent-color);
+        box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.15);
+    }
+
+    .service-icon {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .service-card:hover .service-icon {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .price-tag {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.5rem 1rem;
+        background: rgba(59, 130, 246, 0.1);
+        color: var(--accent-color);
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+    /* Modern Inquiry Form */
+    .inquiry-section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 3rem;
+        background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .form-header h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .highlight {
+        color: var(--accent-color);
+        font-weight: 700;
+    }
+
+    .modern-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+        .form-row {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .input-group label {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-secondary);
+        font-weight: 600;
+        margin-left: 4px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid var(--glass-border);
+        padding: 1rem;
+        border-radius: 12px;
+        color: var(--text-primary);
+        font-family: var(--font-main);
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .input-group input:focus,
+    .input-group textarea:focus {
+        outline: none;
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        background: rgba(15, 23, 42, 0.8);
+    }
+
+    .btn.full-width {
+        width: 100%;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        filter: grayscale(1);
+    }
+
+    .btn svg {
+        transition: transform 0.3s ease;
+    }
+
+    .btn:hover:not(:disabled) svg {
+        transform: translateX(4px) translateY(-4px);
+    }
+
+    .alert.success {
+        text-align: center;
+        padding: 3rem;
+    }
+
+    .success-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--accent-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin: 0 auto 1.5rem;
+        box-shadow: 0 0 20px var(--accent-glow);
+    }
+</style>
+{% endblock %}

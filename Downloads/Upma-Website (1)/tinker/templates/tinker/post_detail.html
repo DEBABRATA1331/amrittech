@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }} | Curve Vault{% endblock %}
+
+{% block content %}
+<div class="post-container animate-fade-in">
+    <div class="post-header">
+        <a href="{% url 'tinker_vault' %}" class="back-link">&larr; Back to Vault</a>
+        <h1 class="post-title">{{ post.title }}</h1>
+        <div class="post-meta">
+            <span class="author">By {{ post.author }}</span>
+            <span class="date">{{ post.created_at|date:"F d, Y" }}</span>
+        </div>
+    </div>
+
+    {% if post.image %}
+    <div class="post-image">
+        <img src="{{ post.image.url }}" alt="{{ post.title }}">
+    </div>
+    {% endif %}
+
+    <div class="post-content">
+        {{ post.content|linebreaks }}
+    </div>
+</div>
+
+<style>
+    .post-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .post-header {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+    }
+
+    .post-title {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        background: var(--gradient-text);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .post-meta {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+    }
+
+    .post-meta span {
+        margin: 0 0.5rem;
+    }
+
+    .post-image {
+        width: 100%;
+        height: 400px;
+        border-radius: 16px;
+        overflow: hidden;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .post-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .post-content {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-primary);
+    }
+
+    .post-content p {
+        margin-bottom: 1.5rem;
+    }
+</style>
+{% endblock %}

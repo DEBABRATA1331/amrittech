@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="payment-status success glass-panel">
+    <h1>Payment Successful! 🎉</h1>
+    <p>Thank you for your order.</p>
+    <p>Order ID: <strong>{{ order.razorpay_order_id }}</strong></p>
+    <p>We will contact you shortly specifically for delivery.</p>
+    <a href="{% url 'tinker_tool' %}" class="btn mt-4">Continue Shopping</a>
+</div>
+
+<style>
+    .payment-status {
+        max_width: 600px;
+        margin: 4rem auto;
+        padding: 3rem;
+        text-align: center;
+    }
+
+    .payment-status h1 {
+        color: #4ade80;
+    }
+</style>
+{% endblock %}

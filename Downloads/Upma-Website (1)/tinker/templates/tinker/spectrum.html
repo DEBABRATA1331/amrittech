@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Curve Spectrum | Upmark Curve{% endblock %}
+
+{% block content %}
+<div class="spectrum-container glass-panel">
+    <h1>Curve Spectrum</h1>
+    <p>Submit your articles to our Quaternary Magazine. Paid publication.</p>
+
+    {% if success %}
+    <div class="alert success">
+        <h3>Submission Received!</h3>
+        <p>Your article has been submitted for review. We will contact you for payment details.</p>
+        <a href="{% url 'tinker_index' %}" class="btn">Back to Tinker</a>
+    </div>
+    {% else %}
+    <form method="post" enctype="multipart/form-data" class="styled-form">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Article Title</label>
+            <input type="text" name="title" required>
+        </div>
+        <div class="form-group">
+            <label>Author Name</label>
+            <input type="text" name="author_name" required>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label>Upload Article (PDF/Docx)</label>
+            <input type="file" name="content_file" required>
+        </div>
+        <div class="payment-info">
+            <p><strong>Note:</strong> Publication involves a processing fee. Status will be 'Pending' until payment is
+                verified.</p>
+        </div>
+        <button type="submit" class="btn">Submit Article</button>
+    </form>
+    {% endif %}
+</div>
+
+<style>
+    .spectrum-container {
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 2.5rem;
+    }
+
+    .spectrum-container h1 {
+        text-align: center;
+        color: var(--accent-color);
+    }
+
+    .spectrum-container p {
+        text-align: center;
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+    }
+
+    .payment-info {
+        background: rgba(234, 179, 8, 0.1);
+        border: 1px solid #eab308;
+        color: #fef08a;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+    }
+</style>
+{% endblock %}

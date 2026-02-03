@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}Curve Tinker | Upmark Curve{% endblock %}
+
+{% block content %}
+<div class="tinker-header">
+    <h1>Curve Tinker</h1>
+    <p>The Hub for Innovation, Learning, and Creation.</p>
+</div>
+
+<div class="tinker-grid">
+    <!-- Lab -->
+    <a href="lab/" class="tinker-card glass-panel">
+        <div class="icon">🔬</div>
+        <h3>Curve Tinker Lab</h3>
+        <p>Book a 7-day specialized training program for your school or college.</p>
+    </a>
+
+    <!-- Campus -->
+    <a href="campus/" class="tinker-card glass-panel">
+        <div class="icon">🏫</div>
+        <h3>Curve Campus</h3>
+        <p>Join our student community on Telegram and WhatsApp.</p>
+    </a>
+
+    <!-- Vault -->
+    <a href="vault/" class="tinker-card glass-panel">
+        <div class="icon">📚</div>
+        <h3>Curve Vault</h3>
+        <p>Explore educational blogs and resources.</p>
+    </a>
+
+    <!-- Spectrum -->
+    <a href="spectrum/" class="tinker-card glass-panel">
+        <div class="icon">📰</div>
+        <h3>Curve Spectrum</h3>
+        <p>Publish your articles in our quaternary magazine.</p>
+    </a>
+
+    <!-- Tool -->
+    <a href="tool/" class="tinker-card glass-panel">
+        <div class="icon">🛠️</div>
+        <h3>Curve Tool</h3>
+        <p>Order Arduino, ESP32, and Robotics kits.</p>
+    </a>
+</div>
+
+<style>
+    .tinker-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: var(--text-primary);
+    }
+
+    .tinker-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .tinker-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .tinker-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-color);
+        background: rgba(30, 41, 59, 0.9);
+    }
+
+    .icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .tinker-card h3 {
+        margin-bottom: 1rem;
+        color: var(--accent-color);
+    }
+</style>
+{% endblock %}
