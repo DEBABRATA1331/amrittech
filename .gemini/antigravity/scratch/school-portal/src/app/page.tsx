@@ -216,8 +216,8 @@ export default function SchoolWebsite() {
         </motion.div>
 
         <motion.div style={{ y: heroTextY, opacity: heroOpacity }}
-          className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full">
-          <div className="max-w-2xl">
+          className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="max-w-2xl w-full">
             <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
               <span className="inline-flex items-center gap-2 mb-5 px-4 py-2 rounded-full bg-white/15 border border-white/30 text-white text-xs font-bold tracking-widest uppercase backdrop-blur-sm">
                 <Sparkles className="w-3 h-3 text-amber-300" />
@@ -264,6 +264,17 @@ export default function SchoolWebsite() {
               </a>
             </motion.div>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, rotate: -45 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ delay: 0.5, duration: 1, type: "spring" }}
+            className="hidden lg:block relative w-[320px] h-[320px] xl:w-[450px] xl:h-[450px] shrink-0 pointer-events-none"
+          >
+            <motion.div animate={{ rotate: 360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }} className="w-full h-full drop-shadow-[0_0_40px_rgba(255,255,255,0.2)]">
+              <Image src="/school-logo.png" alt="Big Logo Overview" fill className="object-contain" priority />
+            </motion.div>
+          </motion.div>
         </motion.div>
 
         {/* Stats bar */}
