@@ -1,0 +1,73 @@
+﻿
+> school-portal@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+node.exe : 
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (:String  
+  ) [], RemoteException
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+> Build error occurred
+Error: Turbopack build 
+failed with 1 errors:
+./src/data/students.json
+Code generation for chunk 
+item errored
+An error occurred while 
+generating the chunk item [pr
+oject]/src/data/students.json
+ (json)
+
+Caused by:
+- Unable to make a module 
+from invalid JSON: expected 
+value at line 1 column 1
+
+Debug info:
+- An error occurred while 
+generating the chunk item [pr
+oject]/src/data/students.json
+ (json)
+- Execution of 
+<JsonChunkItem as EcmascriptC
+hunkItem>::content failed
+- Unable to make a module 
+from invalid JSON: expected 
+value at line 1 column 1
+    at .
+         | v
+       1 + ∩╗┐[
+         | ^
+       2 |   {
+       3 |     "id": 
+"STU-1-001",
+       4 |     "qrId": 
+"ATS-QR-C1-001",
+       5 |     "name": 
+"Aanya Singh",
+
+Import trace:
+  Client Component Browser:
+    ./src/data/students.json
+    ./src/app/teacher/dashboa
+rd/marks/page.tsx [Client 
+Component Browser]
+    ./src/app/teacher/dashboa
+rd/marks/page.tsx [Server 
+Component]
+
+
+    at ignore-listed frames

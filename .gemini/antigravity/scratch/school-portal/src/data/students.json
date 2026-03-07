@@ -1,0 +1,877 @@
+[
+  {
+    "id": "STU-1-001",
+    "qrId": "ATS-QR-C1-001",
+    "name": "Aanya Singh",
+    "class": "1",
+    "section": "A",
+    "rollNo": "01",
+    "school": "Sunrise International School",
+    "admissionYear": "2025",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "EVS",
+      "Art"
+    ],
+    "defaultMarks": {
+      "English": 85,
+      "Hindi": 82,
+      "Mathematics": 78,
+      "EVS": 90,
+      "Art": 95
+    },
+    "father": {
+      "name": "Rajesh Singh",
+      "mobile": "9810000101",
+      "dob": "1988-03-10"
+    },
+    "mother": {
+      "name": "Meena Singh",
+      "mobile": "9810000102",
+      "dob": "1990-07-20"
+    }
+  },
+  {
+    "id": "STU-1-002",
+    "qrId": "ATS-QR-C1-002",
+    "name": "Rohan Gupta",
+    "class": "1",
+    "section": "A",
+    "rollNo": "02",
+    "school": "Sunrise International School",
+    "admissionYear": "2025",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "EVS",
+      "Art"
+    ],
+    "defaultMarks": {
+      "English": 76,
+      "Hindi": 89,
+      "Mathematics": 92,
+      "EVS": 80,
+      "Art": 88
+    },
+    "father": {
+      "name": "Suresh Gupta",
+      "mobile": "9810000103",
+      "dob": "1985-11-05"
+    },
+    "mother": {
+      "name": "Kavita Gupta",
+      "mobile": "9810000104",
+      "dob": "1988-04-15"
+    }
+  },
+  {
+    "id": "STU-1-003",
+    "qrId": "ATS-QR-C1-003",
+    "name": "Priya Sharma",
+    "class": "1",
+    "section": "A",
+    "rollNo": "03",
+    "school": "Sunrise International School",
+    "admissionYear": "2025",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "EVS",
+      "Art"
+    ],
+    "defaultMarks": {
+      "English": 91,
+      "Hindi": 88,
+      "Mathematics": 84,
+      "EVS": 86,
+      "Art": 92
+    },
+    "father": {
+      "name": "Anand Sharma",
+      "mobile": "9810000105",
+      "dob": "1984-06-22"
+    },
+    "mother": {
+      "name": "Ritu Sharma",
+      "mobile": "9810000106",
+      "dob": "1986-09-14"
+    }
+  },
+  {
+    "id": "STU-1-004",
+    "qrId": "ATS-QR-C1-004",
+    "name": "Vikram Patel",
+    "class": "1",
+    "section": "A",
+    "rollNo": "04",
+    "school": "Sunrise International School",
+    "admissionYear": "2025",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "EVS",
+      "Art"
+    ],
+    "defaultMarks": {
+      "English": 70,
+      "Hindi": 75,
+      "Mathematics": 88,
+      "EVS": 72,
+      "Art": 80
+    },
+    "father": {
+      "name": "Dinesh Patel",
+      "mobile": "9810000107",
+      "dob": "1986-01-30"
+    },
+    "mother": {
+      "name": "Gita Patel",
+      "mobile": "9810000108",
+      "dob": "1989-05-18"
+    }
+  },
+  {
+    "id": "STU-1-005",
+    "qrId": "ATS-QR-C1-005",
+    "name": "Ananya Mehta",
+    "class": "1",
+    "section": "A",
+    "rollNo": "05",
+    "school": "Sunrise International School",
+    "admissionYear": "2025",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "EVS",
+      "Art"
+    ],
+    "defaultMarks": {
+      "English": 88,
+      "Hindi": 92,
+      "Mathematics": 76,
+      "EVS": 84,
+      "Art": 96
+    },
+    "father": {
+      "name": "Vijay Mehta",
+      "mobile": "9810000109",
+      "dob": "1983-08-11"
+    },
+    "mother": {
+      "name": "Sunita Mehta",
+      "mobile": "9810000110",
+      "dob": "1987-12-03"
+    }
+  },
+  {
+    "id": "STU-2-001",
+    "qrId": "ATS-QR-C2-001",
+    "name": "Kabir Kumar",
+    "class": "2",
+    "section": "A",
+    "rollNo": "01",
+    "school": "Sunrise International School",
+    "admissionYear": "2024",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "EVS",
+      "Art"
+    ],
+    "defaultMarks": {
+      "English": 80,
+      "Hindi": 86,
+      "Mathematics": 94,
+      "EVS": 78,
+      "Art": 82
+    },
+    "father": {
+      "name": "Mohan Kumar",
+      "mobile": "9810000201",
+      "dob": "1987-04-17"
+    },
+    "mother": {
+      "name": "Anita Kumar",
+      "mobile": "9810000202",
+      "dob": "1989-08-25"
+    }
+  },
+  {
+    "id": "STU-2-002",
+    "qrId": "ATS-QR-C2-002",
+    "name": "Diya Verma",
+    "class": "2",
+    "section": "A",
+    "rollNo": "02",
+    "school": "Sunrise International School",
+    "admissionYear": "2024",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "EVS",
+      "Art"
+    ],
+    "defaultMarks": {
+      "English": 93,
+      "Hindi": 90,
+      "Mathematics": 82,
+      "EVS": 91,
+      "Art": 88
+    },
+    "father": {
+      "name": "Arun Verma",
+      "mobile": "9810000203",
+      "dob": "1985-02-28"
+    },
+    "mother": {
+      "name": "Pooja Verma",
+      "mobile": "9810000204",
+      "dob": "1988-06-10"
+    }
+  },
+  {
+    "id": "STU-2-003",
+    "qrId": "ATS-QR-C2-003",
+    "name": "Arjun Sinha",
+    "class": "2",
+    "section": "A",
+    "rollNo": "03",
+    "school": "Sunrise International School",
+    "admissionYear": "2024",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "EVS",
+      "Art"
+    ],
+    "defaultMarks": {
+      "English": 74,
+      "Hindi": 78,
+      "Mathematics": 96,
+      "EVS": 70,
+      "Art": 75
+    },
+    "father": {
+      "name": "Rakesh Sinha",
+      "mobile": "9810000205",
+      "dob": "1983-10-15"
+    },
+    "mother": {
+      "name": "Nisha Sinha",
+      "mobile": "9810000206",
+      "dob": "1986-03-22"
+    }
+  },
+  {
+    "id": "STU-2-004",
+    "qrId": "ATS-QR-C2-004",
+    "name": "Naina Joshi",
+    "class": "2",
+    "section": "A",
+    "rollNo": "04",
+    "school": "Sunrise International School",
+    "admissionYear": "2024",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "EVS",
+      "Art"
+    ],
+    "defaultMarks": {
+      "English": 87,
+      "Hindi": 84,
+      "Mathematics": 79,
+      "EVS": 88,
+      "Art": 94
+    },
+    "father": {
+      "name": "Deepak Joshi",
+      "mobile": "9810000207",
+      "dob": "1984-07-08"
+    },
+    "mother": {
+      "name": "Rekha Joshi",
+      "mobile": "9810000208",
+      "dob": "1987-11-30"
+    }
+  },
+  {
+    "id": "STU-2-005",
+    "qrId": "ATS-QR-C2-005",
+    "name": "Rahul Tiwari",
+    "class": "2",
+    "section": "A",
+    "rollNo": "05",
+    "school": "Sunrise International School",
+    "admissionYear": "2024",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "EVS",
+      "Art"
+    ],
+    "defaultMarks": {
+      "English": 82,
+      "Hindi": 79,
+      "Mathematics": 88,
+      "EVS": 83,
+      "Art": 77
+    },
+    "father": {
+      "name": "Amit Tiwari",
+      "mobile": "9810000209",
+      "dob": "1982-09-19"
+    },
+    "mother": {
+      "name": "Swati Tiwari",
+      "mobile": "9810000210",
+      "dob": "1985-01-07"
+    }
+  },
+  {
+    "id": "STU-3-001",
+    "qrId": "ATS-QR-C3-001",
+    "name": "Ishaan Malhotra",
+    "class": "3",
+    "section": "A",
+    "rollNo": "01",
+    "school": "Sunrise International School",
+    "admissionYear": "2023",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies"
+    ],
+    "defaultMarks": {
+      "English": 88,
+      "Hindi": 82,
+      "Mathematics": 95,
+      "Science": 90,
+      "S.Studies": 85
+    },
+    "father": {
+      "name": "Nitin Malhotra",
+      "mobile": "9810000301",
+      "dob": "1984-05-12"
+    },
+    "mother": {
+      "name": "Prerna Malhotra",
+      "mobile": "9810000302",
+      "dob": "1987-10-20"
+    }
+  },
+  {
+    "id": "STU-3-002",
+    "qrId": "ATS-QR-C3-002",
+    "name": "Simran Kaur",
+    "class": "3",
+    "section": "A",
+    "rollNo": "02",
+    "school": "Sunrise International School",
+    "admissionYear": "2023",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies"
+    ],
+    "defaultMarks": {
+      "English": 94,
+      "Hindi": 90,
+      "Mathematics": 80,
+      "Science": 88,
+      "S.Studies": 92
+    },
+    "father": {
+      "name": "Gurpreet Singh",
+      "mobile": "9810000303",
+      "dob": "1983-12-08"
+    },
+    "mother": {
+      "name": "Harpreet Kaur",
+      "mobile": "9810000304",
+      "dob": "1986-04-14"
+    }
+  },
+  {
+    "id": "STU-3-003",
+    "qrId": "ATS-QR-C3-003",
+    "name": "Ayush Yadav",
+    "class": "3",
+    "section": "A",
+    "rollNo": "03",
+    "school": "Sunrise International School",
+    "admissionYear": "2023",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies"
+    ],
+    "defaultMarks": {
+      "English": 72,
+      "Hindi": 84,
+      "Mathematics": 90,
+      "Science": 78,
+      "S.Studies": 80
+    },
+    "father": {
+      "name": "Sandeep Yadav",
+      "mobile": "9810000305",
+      "dob": "1981-07-25"
+    },
+    "mother": {
+      "name": "Usha Yadav",
+      "mobile": "9810000306",
+      "dob": "1984-02-11"
+    }
+  },
+  {
+    "id": "STU-3-004",
+    "qrId": "ATS-QR-C3-004",
+    "name": "Kavya Reddy",
+    "class": "3",
+    "section": "A",
+    "rollNo": "04",
+    "school": "Sunrise International School",
+    "admissionYear": "2023",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies"
+    ],
+    "defaultMarks": {
+      "English": 90,
+      "Hindi": 86,
+      "Mathematics": 85,
+      "Science": 92,
+      "S.Studies": 88
+    },
+    "father": {
+      "name": "Srinivas Reddy",
+      "mobile": "9810000307",
+      "dob": "1982-11-16"
+    },
+    "mother": {
+      "name": "Lakshmi Reddy",
+      "mobile": "9810000308",
+      "dob": "1985-06-28"
+    }
+  },
+  {
+    "id": "STU-3-005",
+    "qrId": "ATS-QR-C3-005",
+    "name": "Dev Chopra",
+    "class": "3",
+    "section": "A",
+    "rollNo": "05",
+    "school": "Sunrise International School",
+    "admissionYear": "2023",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies"
+    ],
+    "defaultMarks": {
+      "English": 78,
+      "Hindi": 80,
+      "Mathematics": 88,
+      "Science": 75,
+      "S.Studies": 82
+    },
+    "father": {
+      "name": "Rahul Chopra",
+      "mobile": "9810000309",
+      "dob": "1980-03-04"
+    },
+    "mother": {
+      "name": "Neha Chopra",
+      "mobile": "9810000310",
+      "dob": "1983-09-17"
+    }
+  },
+  {
+    "id": "STU-4-001",
+    "qrId": "ATS-QR-C4-001",
+    "name": "Sneha Agarwal",
+    "class": "4",
+    "section": "A",
+    "rollNo": "01",
+    "school": "Sunrise International School",
+    "admissionYear": "2022",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies",
+      "Computer"
+    ],
+    "defaultMarks": {
+      "English": 92,
+      "Hindi": 88,
+      "Mathematics": 84,
+      "Science": 90,
+      "S.Studies": 86,
+      "Computer": 94
+    },
+    "father": {
+      "name": "Pankaj Agarwal",
+      "mobile": "9810000401",
+      "dob": "1983-01-22"
+    },
+    "mother": {
+      "name": "Mamta Agarwal",
+      "mobile": "9810000402",
+      "dob": "1986-08-03"
+    }
+  },
+  {
+    "id": "STU-4-002",
+    "qrId": "ATS-QR-C4-002",
+    "name": "Rishi Pandey",
+    "class": "4",
+    "section": "A",
+    "rollNo": "02",
+    "school": "Sunrise International School",
+    "admissionYear": "2022",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies",
+      "Computer"
+    ],
+    "defaultMarks": {
+      "English": 80,
+      "Hindi": 85,
+      "Mathematics": 96,
+      "Science": 82,
+      "S.Studies": 78,
+      "Computer": 88
+    },
+    "father": {
+      "name": "Sunil Pandey",
+      "mobile": "9810000403",
+      "dob": "1981-06-15"
+    },
+    "mother": {
+      "name": "Kiran Pandey",
+      "mobile": "9810000404",
+      "dob": "1984-12-29"
+    }
+  },
+  {
+    "id": "STU-4-003",
+    "qrId": "ATS-QR-C4-003",
+    "name": "Tanvi Mishra",
+    "class": "4",
+    "section": "A",
+    "rollNo": "03",
+    "school": "Sunrise International School",
+    "admissionYear": "2022",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies",
+      "Computer"
+    ],
+    "defaultMarks": {
+      "English": 86,
+      "Hindi": 90,
+      "Mathematics": 78,
+      "Science": 84,
+      "S.Studies": 92,
+      "Computer": 80
+    },
+    "father": {
+      "name": "Ashok Mishra",
+      "mobile": "9810000405",
+      "dob": "1980-04-08"
+    },
+    "mother": {
+      "name": "Deepa Mishra",
+      "mobile": "9810000406",
+      "dob": "1983-10-21"
+    }
+  },
+  {
+    "id": "STU-4-004",
+    "qrId": "ATS-QR-C4-004",
+    "name": "Yash Bajaj",
+    "class": "4",
+    "section": "A",
+    "rollNo": "04",
+    "school": "Sunrise International School",
+    "admissionYear": "2022",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies",
+      "Computer"
+    ],
+    "defaultMarks": {
+      "English": 74,
+      "Hindi": 78,
+      "Mathematics": 92,
+      "Science": 86,
+      "S.Studies": 80,
+      "Computer": 90
+    },
+    "father": {
+      "name": "Ramesh Bajaj",
+      "mobile": "9810000407",
+      "dob": "1979-09-13"
+    },
+    "mother": {
+      "name": "Shanta Bajaj",
+      "mobile": "9810000408",
+      "dob": "1982-03-06"
+    }
+  },
+  {
+    "id": "STU-4-005",
+    "qrId": "ATS-QR-C4-005",
+    "name": "Pari Kapoor",
+    "class": "4",
+    "section": "A",
+    "rollNo": "05",
+    "school": "Sunrise International School",
+    "admissionYear": "2022",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies",
+      "Computer"
+    ],
+    "defaultMarks": {
+      "English": 96,
+      "Hindi": 92,
+      "Mathematics": 88,
+      "Science": 94,
+      "S.Studies": 90,
+      "Computer": 98
+    },
+    "father": {
+      "name": "Aakash Kapoor",
+      "mobile": "9810000409",
+      "dob": "1981-11-27"
+    },
+    "mother": {
+      "name": "Renu Kapoor",
+      "mobile": "9810000410",
+      "dob": "1984-07-14"
+    }
+  },
+  {
+    "id": "STU-5-001",
+    "qrId": "ATS-QR-C5-001",
+    "name": "Aryan Sharma",
+    "class": "5",
+    "section": "A",
+    "rollNo": "01",
+    "school": "Sunrise International School",
+    "admissionYear": "2021",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies",
+      "Computer"
+    ],
+    "defaultMarks": {
+      "English": 95,
+      "Hindi": 88,
+      "Mathematics": 92,
+      "Science": 90,
+      "S.Studies": 85,
+      "Computer": 96
+    },
+    "champScore": 840,
+    "father": {
+      "name": "Rajesh Sharma",
+      "mobile": "9876543210",
+      "dob": "1980-05-15"
+    },
+    "mother": {
+      "name": "Priya Sharma",
+      "mobile": "9876543211",
+      "dob": "1982-08-22"
+    }
+  },
+  {
+    "id": "STU-5-002",
+    "qrId": "ATS-QR-C5-002",
+    "name": "Ananya Dubey",
+    "class": "5",
+    "section": "A",
+    "rollNo": "02",
+    "school": "Sunrise International School",
+    "admissionYear": "2021",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies",
+      "Computer"
+    ],
+    "defaultMarks": {
+      "English": 88,
+      "Hindi": 94,
+      "Mathematics": 84,
+      "Science": 88,
+      "S.Studies": 90,
+      "Computer": 85
+    },
+    "champScore": 720,
+    "father": {
+      "name": "Sanjay Dubey",
+      "mobile": "9810000502",
+      "dob": "1979-07-03"
+    },
+    "mother": {
+      "name": "Anu Dubey",
+      "mobile": "9810000503",
+      "dob": "1982-12-18"
+    }
+  },
+  {
+    "id": "STU-5-003",
+    "qrId": "ATS-QR-C5-003",
+    "name": "Arnav Saxena",
+    "class": "5",
+    "section": "A",
+    "rollNo": "03",
+    "school": "Sunrise International School",
+    "admissionYear": "2021",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies",
+      "Computer"
+    ],
+    "defaultMarks": {
+      "English": 79,
+      "Hindi": 82,
+      "Mathematics": 96,
+      "Science": 84,
+      "S.Studies": 78,
+      "Computer": 92
+    },
+    "champScore": 680,
+    "father": {
+      "name": "Vivek Saxena",
+      "mobile": "9810000504",
+      "dob": "1978-03-25"
+    },
+    "mother": {
+      "name": "Alka Saxena",
+      "mobile": "9810000505",
+      "dob": "1981-09-08"
+    }
+  },
+  {
+    "id": "STU-5-004",
+    "qrId": "ATS-QR-C5-004",
+    "name": "Myra Chauhan",
+    "class": "5",
+    "section": "A",
+    "rollNo": "04",
+    "school": "Sunrise International School",
+    "admissionYear": "2021",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies",
+      "Computer"
+    ],
+    "defaultMarks": {
+      "English": 91,
+      "Hindi": 87,
+      "Mathematics": 80,
+      "Science": 92,
+      "S.Studies": 88,
+      "Computer": 86
+    },
+    "champScore": 760,
+    "father": {
+      "name": "Manoj Chauhan",
+      "mobile": "9810000506",
+      "dob": "1977-11-12"
+    },
+    "mother": {
+      "name": "Sarita Chauhan",
+      "mobile": "9810000507",
+      "dob": "1980-06-24"
+    }
+  },
+  {
+    "id": "STU-5-005",
+    "qrId": "ATS-QR-C5-005",
+    "name": "Vihaan Thakur",
+    "class": "5",
+    "section": "A",
+    "rollNo": "05",
+    "school": "Sunrise International School",
+    "admissionYear": "2021",
+    "subjects": [
+      "English",
+      "Hindi",
+      "Mathematics",
+      "Science",
+      "S.Studies",
+      "Computer"
+    ],
+    "defaultMarks": {
+      "English": 84,
+      "Hindi": 80,
+      "Mathematics": 88,
+      "Science": 86,
+      "S.Studies": 82,
+      "Computer": 90
+    },
+    "champScore": 700,
+    "father": {
+      "name": "Harish Thakur",
+      "mobile": "9810000508",
+      "dob": "1976-02-19"
+    },
+    "mother": {
+      "name": "Jyoti Thakur",
+      "mobile": "9810000509",
+      "dob": "1979-08-31"
+    }
+  }
+]

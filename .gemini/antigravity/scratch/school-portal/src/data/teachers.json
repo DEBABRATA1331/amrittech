@@ -1,0 +1,118 @@
+[
+    {
+        "id": "TCH-001",
+        "role": "teacher",
+        "name": "Mrs. Anjali Kumar",
+        "designation": "Class Teacher",
+        "classAssigned": "1",
+        "section": "A",
+        "subjects": [
+            "English",
+            "Hindi",
+            "Mathematics",
+            "EVS",
+            "Art"
+        ],
+        "mobile": "9900000001",
+        "dob": "1985-04-12",
+        "email": "anjali.k@amrittech.edu",
+        "qualifications": "B.Ed, M.A. English",
+        "experience": "8 years"
+    },
+    {
+        "id": "TCH-002",
+        "role": "teacher",
+        "name": "Mr. Ramesh Verma",
+        "designation": "Class Teacher",
+        "classAssigned": "2",
+        "section": "A",
+        "subjects": [
+            "English",
+            "Hindi",
+            "Mathematics",
+            "EVS",
+            "Art"
+        ],
+        "mobile": "9900000002",
+        "dob": "1980-07-22",
+        "email": "ramesh.v@amrittech.edu",
+        "qualifications": "B.Ed, M.Sc. Mathematics",
+        "experience": "12 years"
+    },
+    {
+        "id": "TCH-003",
+        "role": "teacher",
+        "name": "Mrs. Sunita Sharma",
+        "designation": "Class Teacher",
+        "classAssigned": "3",
+        "section": "A",
+        "subjects": [
+            "English",
+            "Hindi",
+            "Mathematics",
+            "Science",
+            "S.Studies"
+        ],
+        "mobile": "9900000003",
+        "dob": "1982-11-15",
+        "email": "sunita.s@amrittech.edu",
+        "qualifications": "B.Ed, B.Sc. Science",
+        "experience": "10 years"
+    },
+    {
+        "id": "TCH-004",
+        "role": "teacher",
+        "name": "Mr. Anil Singh",
+        "designation": "Class Teacher",
+        "classAssigned": "4",
+        "section": "A",
+        "subjects": [
+            "English",
+            "Hindi",
+            "Mathematics",
+            "Science",
+            "S.Studies",
+            "Computer"
+        ],
+        "mobile": "9900000004",
+        "dob": "1978-03-08",
+        "email": "anil.s@amrittech.edu",
+        "qualifications": "B.Ed, M.Sc. Computer Science",
+        "experience": "15 years"
+    },
+    {
+        "id": "TCH-005",
+        "role": "teacher",
+        "name": "Mrs. Priya Gupta",
+        "designation": "Class Teacher",
+        "classAssigned": "5",
+        "section": "A",
+        "subjects": [
+            "English",
+            "Hindi",
+            "Mathematics",
+            "Science",
+            "S.Studies",
+            "Computer"
+        ],
+        "mobile": "9900000005",
+        "dob": "1983-09-25",
+        "email": "priya.g@amrittech.edu",
+        "qualifications": "B.Ed, M.A. Education",
+        "experience": "9 years"
+    },
+    {
+        "id": "PRI-001",
+        "role": "principal",
+        "name": "Dr. Rajendra Prasad",
+        "designation": "Principal",
+        "classAssigned": "all",
+        "section": "all",
+        "subjects": [],
+        "mobile": "9900000010",
+        "dob": "1970-01-15",
+        "email": "principal@amrittech.edu",
+        "qualifications": "Ph.D. Education, M.Ed",
+        "experience": "25 years"
+    }
+]
