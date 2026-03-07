@@ -229,7 +229,9 @@ export default function SchoolWebsite() {
               <motion.div key={word}
                 initial={{ opacity: 0, x: -60 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 + i * 0.13, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}>
+                transition={{ delay: 0.1 + i * 0.13, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ rotate: 5, scale: 1.05 }}
+              >
                 <span className={`block font-black leading-[1.02] drop-shadow-xl ${word === "International" ? "text-cyan-300 text-[clamp(2.5rem,8vw,5rem)]" : "text-white text-[clamp(2.5rem,8vw,5rem)]"}`}>
                   {word}
                 </span>
